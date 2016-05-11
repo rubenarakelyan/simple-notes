@@ -2,7 +2,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: './public/js/simplenotes.js'
   },
   module: {
     loaders: [
