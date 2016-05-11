@@ -10,8 +10,7 @@
         "doctrine/dbal": "*",
         "filp/whoops": "*",
         "barryvdh/laravel-debugbar": "*",
-        "watson/validating": "*",
-        "twbs/bootstrap": "*"
+        "watson/validating": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
