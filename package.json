@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "prod": "webpack --debug",
+    "prod": "webpack",
     "dev": "webpack --debug"
   },
   "devDependencies": {
@@ -16,7 +16,7 @@
   "name": "simple-notes",
   "description": "A demo web app for Laravel.",
   "version": "1.0.0",
-  "main": "gulpfile.js",
+  "main": "simplenotes.js",
   "directories": {
     "test": "tests"
   },
