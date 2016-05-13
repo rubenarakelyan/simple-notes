@@ -68,8 +68,7 @@ cd /var/www
 php composer.phar self-update
 php composer.phar install
 rm -r node_modules >/dev/null 2>&1
-npm install --save react react-dom redux react-redux immutable
-npm install --save-dev webpack babel-loader babel-preset-es2015 babel-preset-react
+npm install
 
 # Disable the default site
 nginx_modsite -d default
