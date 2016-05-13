@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// React app routes
+Route::get('/', 'HomeController@index');
+Route::get('/new', 'HomeController@index');
+Route::get('/note/{note_id}', 'HomeController@index');
+Route::get('/note/{note_id}/comment', 'HomeController@index');
+
+// Authentication routes
+Route::auth();
