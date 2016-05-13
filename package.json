@@ -1,8 +1,32 @@
 {
-  "private": true,
+  "name": "simple-notes",
+  "version": "1.0.0",
+  "description": "A demo web app for Laravel.",
+  "author": "Ruben Arakelyan <ruben@ra.me.uk>",
   "scripts": {
-    "prod": "webpack",
-    "dev": "webpack --debug"
+    "build-prod": "webpack",
+    "build-dev": "webpack --debug",
+    "build-style": "gulp"
+  },
+  "main": "public/js/simplenotes.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenarakelyan/simple-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubenarakelyan/simple-notes/issues"
+  },
+  "keywords": [
+    "simple",
+    "notes"
+  ],
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.4.0",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-loader": "^6.2.4",
@@ -13,32 +37,6 @@
     "laravel-elixir": "^5.0.0",
     "webpack": "^1.13.0"
   },
-  "name": "simple-notes",
-  "description": "A demo web app for Laravel.",
-  "version": "1.0.0",
-  "main": "simplenotes.js",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rubenarakelyan/simple-notes.git"
-  },
-  "keywords": [
-    "simple",
-    "notes"
-  ],
-  "author": "Ruben Arakelyan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rubenarakelyan/simple-notes/issues"
-  },
-  "homepage": "https://github.com/rubenarakelyan/simple-notes#readme",
-  "dependencies": {
-    "immutable": "^3.8.1",
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
-  }
+  "private": true,
+  "license": "MIT"
 }
