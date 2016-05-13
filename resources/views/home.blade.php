@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simple Notes</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="js/simplenotes.js"></script>
-  </body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Notes overview <small class="pull-right"><a href="/logout">Logout</a></small></h2>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-hover" id="notes">
+                        <thead>
+                            <tr>
+                                <th>Created by</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (count($notes) === 0)
+                            <tr>
+                                <td colspan="3">There are no notes to display.</td>
+                            </tr>
+                            @else
+                            @foreach ($notes as $note)
+                            <tr>
+                                <td>{{ $note->user->name }}</td>
+                                <td><a href="/note/{{ $note->id }}">{{ $note->title }}</a></td>
+                                <td>{{ (new \Carbon\Carbon($note->updated_at))->format('d/m/y H:i') }}</td>
+                            </tr>
+                            @endforeach
+                            @endif
+                        </tbody>
+                    </table>
+                    <a href="/new" class="btn btn-success btn-raised">Create a new note <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
