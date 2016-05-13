@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Note extends Model
+class Comment extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,20 +12,20 @@ class Note extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'text', 'user_id',
+        'text', 'note_id', 'user_id',
     ];
 
     /**
-     * Get the comment records associated with the note.
+     * Get the note record associated with the comment.
      *
      * @var object
      */
-    public function comments() {
-        return $this->hasMany('App\Comment')->orderBy('updated_at', 'desc');
+    public function note() {
+        return $this->belongsTo('App\Note');
     }
 
     /**
-     * Get the user record associated with the note.
+     * Get the user record associated with the comment.
      *
      * @var object
      */
