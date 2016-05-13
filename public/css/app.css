@@ -1,0 +1,16 @@
+body {
+  background-color: #f2f4f6; }
+
+th {
+  background-color: #ddd; }
+
+.form-required {
+  color: #f00; }
+
+.btn-success {
+  text-transform: uppercase; }
+
+.icon {
+  border-radius: 50%; }
+
+/*# sourceMappingURL=app.css.map */

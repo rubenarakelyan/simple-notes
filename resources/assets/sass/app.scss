@@ -1,0 +1,21 @@
+$brand-blue: #f2f4f6;
+
+body {
+    background-color: $brand-blue;
+}
+
+th {
+    background-color: #ddd;
+}
+
+.form-required {
+    color: #f00;
+}
+
+.btn-success {
+    text-transform: uppercase;
+}
+
+.icon {
+    border-radius: 50%;
+}
