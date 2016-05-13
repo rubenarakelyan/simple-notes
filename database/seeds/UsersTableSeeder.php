@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder
 {
@@ -11,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $date = (new \DateTime())->format('Y-m-d H:i:s');
+        $date = Carbon::now('Europe/London')->format('Y-m-d H:i:s');
         
         DB::table('users')->insert([
             'name' => 'Henry Jones',

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class NotesTableSeeder extends Seeder
 {
@@ -11,7 +12,7 @@ class NotesTableSeeder extends Seeder
      */
     public function run()
     {
-        $date = (new \DateTime())->format('Y-m-d H:i:s');
+        $date = Carbon::now('Europe/London')->year(2015)->month(8)->day(1)->hour(9)->minute(32)->second(0)->format('Y-m-d H:i:s');
         
         DB::table('notes')->insert([
             'title' => 'This is a note',
